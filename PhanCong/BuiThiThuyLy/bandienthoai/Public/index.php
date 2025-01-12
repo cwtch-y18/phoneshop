@@ -1,13 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-<h3>Bui Thị Thúy Ly</h3>
-<h3>Bui Thị Thúy Ly</h3>
-<h3>Bui Thị Thúy Ly</h3>
-</body>
-</html>
+<?php 
+require_once '../App/Cores/Database.php';
+require_once '../App/Cores/View.php';
+require_once '../App/Cores/Router.php';
+require_once '../App/helpers/UrlHelper.php';
+require_once '../app/controllers/BaseController.php';
+require_once '../App/controllers/Frontend/HomeController.php';
+require_once '../App/controllers/Backend/DashboardController.php';
+require_once '../App/controllers/Backend/AuthController.php';
+require_once '../App/controllers/Backend/UserController.php';
+
+Core\Router::get('/', ['controller' => 'Frontend\\HomeController', 'action' => 'index']);
+// Core\Router::get('/about', ['controller' => 'Frontend\\AboutController', 'action' => 'index']);
+Core\Router::get('/admin', ['controller' => 'Backend\\DashboardController', 'action' => 'index']);
+Core\Router::get('/admin/login',['controller' => 'Backend\\AuthController' , 'action' => 'login']);
+Core\Router::get('/admin/login', ['controller' => 'Backend\\AuthController', 'action' => 'loginForm']);
+Core\Router::post('/admin/login', ['controller' => 'Backend\\AuthController', 'action' => 'login']);
+Core\Router::get('/admin/signup',['controller' => 'Backend\\AuthController' , 'action' => 'signup']);
+$url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$method = $_SERVER['REQUEST_METHOD'];  // Lấy phương thức GET hoặc POST
+
+$basePath = '/bandienthoai/Public';
+
+if (strpos($url, $basePath) === 0) {
+    $url = substr($url, strlen($basePath));
+}
+
+Core\Router::route($url, $method);

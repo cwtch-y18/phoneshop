@@ -1,0 +1,286 @@
+/* PC */
+
+@media screen and (min-width: 992px) {
+    .show-on-mobile-tablet {
+        display: none;
+    }
+
+    .mobile-header {
+        display: none;
+    }
+}
+
+/* Tablet,mobile */
+@media screen and (max-width: 991.99px) {
+    .btn-bg-black {
+        padding: 12px 30px;
+    }
+
+    .toggle-menu {
+        cursor: pointer;
+    }
+
+    #formSearch {
+        display: none;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .header-action {
+        display: none;
+    }
+
+    .menu-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 3;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s ease;
+    }
+
+    .menu-drawer {
+        padding: 60px;
+        position: fixed;
+        inset: 0 30% 0 0;
+        background: #fff;
+        z-index: 4;
+        transform: translateX(-100%);
+        transition: 0.5s ease;
+    }
+
+    .form-search {
+        margin: 50px 0;
+        position: relative;
+        width: 100%;
+    }
+
+    .form-search__input {
+        max-width: 372px;
+        width: 100%;
+        height: 56px;
+        padding: 0 16px 0 48px;
+        border: none;
+        outline: none;
+        border-radius: 8px;
+        background: #f5f5f5;
+        color: #656565;
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1.28; /* 128.571% */
+    }
+
+    .navbar__list {
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 30px;
+    }
+
+    .navbar__item {
+        display: block;
+    }
+
+    .separate {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        cursor: pointer;
+    }
+
+        .separate label {
+            cursor: pointer;
+        }
+
+    /* Introduce - Giới thiệu*/
+    /* First */
+    .introduce-first {
+        align-items: flex-start;
+        height: 769px;
+        overflow: hidden;
+    }
+
+    .introduce-first__content {
+        width: 100%;
+        padding: 88px 0 0 0;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .introduce-first__label {
+        margin: 0 auto;
+    }
+
+    .introduce-first__title {
+        margin: 0 auto;
+        font-size: 7.2rem;
+        line-height: 1;
+    }
+
+    .introduce-first__desc {
+        margin: 0 auto;
+    }
+
+    .introduce-first__btn {
+        margin: 0 auto;
+    }
+
+    .introduce-first__img {
+        width: 321px;
+        right: 50%;
+        bottom: -150px;
+        transform: translateX(50%);
+    }
+
+    /* Last */
+    /* .introduce {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .introduce__item-01{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    } */
+
+    .category-control {
+        display: none;
+    }
+    /* Category */
+
+    .category {
+        padding: 64px 0;
+    }
+
+    .category-list {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        max-height: calc( 2 * 128px + 16px );
+        overflow-y: auto;
+    }
+
+    .product-list {
+        /*grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));*/
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .featured-list {
+        text-align: center;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(336px, 1fr));
+    }
+
+    .featured-item__body {
+        padding: 56px 32px 46px;
+        align-items: center;
+    }
+
+    .discount-list {
+        /*grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));*/
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .banner__content {
+        width: 80%;
+    }
+
+    .banner__title {
+        font-size: 4.8rem;
+        line-height: 1.5;
+    }
+
+    /* Footer */
+
+    .footer {
+        padding: 48px 0;
+    }
+
+    .footer__row {
+        flex-direction: column;
+        row-gap: 32px;
+    }
+
+    .footer__column {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+        .footer__column:first-child {
+            width: 70%;
+        }
+
+    .footer-social {
+        margin-top: 32px;
+        justify-content: center;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 991.99px) {
+    .show-on-mobile {
+        display: none;
+    }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 767.99px) {
+    .category-list {
+        max-height: calc( 3 * 128px + 32px ); /* Chiều cao cho 3 hàng và khoảng cách */
+    }
+
+    .featured-list {
+        text-align: center;
+        display: flex;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .featured-item {
+        min-width: 100%;
+        padding-bottom: 56px;
+        transition: transform 0.5s ease;
+    }
+
+    .featured-item__body {
+        padding: 56px 32px 46px;
+        align-items: center;
+    }
+
+    .featured-dots {
+        position: absolute;
+        right: 50%;
+        bottom: 56px;
+        transform: translateX(50%);
+        display: flex;
+        gap: 10px;
+    }
+
+    .featured-dot {
+        cursor: pointer;
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        background: #000;
+        opacity: 0.1;
+        border-radius: 50%;
+    }
+
+        .featured-dot.active {
+            opacity: 1;
+        }
+
+    .product-list {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .discount-list {
+        grid-template-columns: repeat(2,1fr);
+    }
+}

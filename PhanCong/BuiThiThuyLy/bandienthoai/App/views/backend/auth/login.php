@@ -1,100 +1,78 @@
+
 <!DOCTYPE html>
-<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html xmlns="http://www.w3.org/1999/xhtml">
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- ===== Iconscout CSS ===== -->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
-    <!-- ===== CSS ===== -->
-    <link rel="stylesheet" href="style.css" />
-    <title>Login & Registration Form</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="forms">
-        <div class="form login">
-          <span class="title">Login</span>
+    <title>Login | Cyber</title>
+    <!-- <link rel="stylesheet" href="./assets/css/reset.css" /> -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+    <!-- Font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="/css/login.css" />
+</head>
+<body>
+    <div id="toast"></div>
+    <input type="hidden" id="statusServer" runat="server" />
+    <form id="form" action="" method="post" autocomplete="off" runat="server">
+        <div class="login">
+            <div class="content">
+                <h1 class="heading">Login Account</h1>
+                <div class="form-item">
+                    <label for="account">Account</label>
+                    <div class="form-item__body">
+                        <div class="form-input">
+                            <input
+                                type="text"
+                                name="account"
+                                id="account"
+                                placeholder="Enter account"
+                                runat="server" />
+                        </div>
+                        <span class="form-message" id="msgErrorAccount"
+                            runat="server"></span>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label for="password">Password</label>
+                    <div class="form-item__body">
+                        <div class="form-input">
+                            <input
+                                type="password"
+                                name="password"
+                                id="password"
+                                placeholder="Enter password"
+                                runat="server" />
+                        </div>
+                        <span class="form-message" id="msgErrorPassword"
+                            runat="server"></span>
+                    </div>
+                </div>
 
-          <form action="#">
-            <div class="input-field">
-              <input type="text" placeholder="Enter your email" required />
-              <i class="uil uil-envelope icon"></i>
+                <div class="form-submit">
+                    <button type="submit" class="btn-login" id="submitBtn">
+                        Login
+                    </button>
+                </div>
+
+                <div class="sign-up">
+                    <span>Don't have an account?</span>
+                    <a href="/admin/signup">Sign up</a>
+                </div>
             </div>
-            <div class="input-field">
-              <input type="password" class="password" placeholder="Enter your password" required />
-              <i class="uil uil-lock icon"></i>
-              <i class="uil uil-eye-slash showHidePw"></i>
-            </div>
-
-            <div class="checkbox-text">
-              <div class="checkbox-content">
-                <input type="checkbox" id="logCheck" />
-                <label for="logCheck" class="text">Remember me</label>
-              </div>
-
-              <a href="#" class="text">Forgot password?</a>
-            </div>
-
-            <div class="input-field button">
-              <input type="button" value="Login" />
-            </div>
-          </form>
-
-          <div class="login-signup">
-            <span class="text"
-              >Not a member?
-              <a href="#" class="text signup-link">Signup Now</a>
-            </span>
-          </div>
         </div>
+    </form>
 
-        <!-- Registration Form -->
-        <div class="form signup">
-          <span class="title">Registration</span>
-
-          <form action="#">
-            <div class="input-field">
-              <input type="text" placeholder="Enter your name" required />
-              <i class="uil uil-user"></i>
-            </div>
-            <div class="input-field">
-              <input type="text" placeholder="Enter your email" required />
-              <i class="uil uil-envelope icon"></i>
-            </div>
-            <div class="input-field">
-              <input type="password" class="password" placeholder="Create a password" required />
-              <i class="uil uil-lock icon"></i>
-            </div>
-            <div class="input-field">
-              <input type="password" class="password" placeholder="Confirm a password" required />
-              <i class="uil uil-lock icon"></i>
-              <i class="uil uil-eye-slash showHidePw"></i>
-            </div>
-
-            <div class="checkbox-text">
-              <div class="checkbox-content">
-                <input type="checkbox" id="termCon" />
-                <label for="termCon" class="text">I accepted all terms and conditions</label>
-              </div>
-            </div>
-
-            <div class="input-field button">
-              <input type="button" value="Signup" />
-            </div>
-          </form>
-
-          <div class="login-signup">
-            <span class="text"
-              >Already a member?
-              <a href="#" class="text login-link">Login Now</a>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <script src="script.js"></script>
-  </body>
+    <script src="/js/login.js"></script>
+</body>
 </html>
