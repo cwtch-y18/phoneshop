@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="/css/signup.css" />
 </head>
 <body>
-    <form id="form" action="" method="post" autocomplete="off" runat="server">
+    <form id="form" action="/admin/signup" method="post" autocomplete="off" >
         <div class="sign-up">
             <div class="content">
                 <h1 class="heading">Sign up for an account</h1>
@@ -41,12 +41,12 @@
                                 name="nameUser"
                                 id="nameUser"
                                 placeholder="Enter name"
-                                runat="server" />
+                                 />
                         </div>
                         <span
                             class="form-message"
                             id="msgErrorNameUser"
-                            runat="server"></span>
+                            ></span>
                     </div>
                 </div>
                 <div class="form-item">
@@ -58,12 +58,12 @@
                                 name="phoneNumber"
                                 id="phoneNumber"
                                 placeholder="Enter phone number"
-                                runat="server" />
+                                 />
                         </div>
                         <span
                             class="form-message"
                             id="msgErrorPhoneNumber"
-                            runat="server"></span>
+                            ></span>
                     </div>
                 </div>
                 <div class="form-item">
@@ -75,12 +75,12 @@
                                 name="address"
                                 id="address"
                                 placeholder="Enter address"
-                                runat="server" />
+                                 />
                         </div>
                         <span
                             class="form-message"
                             id="msgErrorAddress"
-                            runat="server"></span>
+                            ></span>
                     </div>
                 </div>
                 <div class="form-item">
@@ -93,7 +93,7 @@
                                     name="sex"
                                     value="male"
                                     id="male"
-                                    runat="server" />
+                                     />
                                 <label for="male">Male</label>
                             </div>
                             <div class="radio-item">
@@ -102,14 +102,14 @@
                                     name="sex"
                                     value="female"
                                     id="female"
-                                    runat="server" />
+                                     />
                                 <label for="female">Female</label>
                             </div>
                         </div>
                         <span
                             class="form-message"
                             id="msgErrorSex"
-                            runat="server"></span>
+                            ></span>
                     </div>
                 </div>
                 <div class="form-item">
@@ -120,12 +120,12 @@
                                 type="date"
                                 name="dateOfBirth"
                                 id="dateOfBirth"
-                                runat="server" />
+                                 />
                         </div>
                         <span
                             class="form-message"
                             id="msgErrorDateOfBirth"
-                            runat="server"></span>
+                            ></span>
                     </div>
                 </div>
                 <div class="form-item">
@@ -137,12 +137,12 @@
                                 name="account"
                                 id="account"
                                 placeholder="Enter account"
-                                runat="server" />
+                                 />
                         </div>
                         <span
                             class="form-message"
                             id="msgErrorAccount"
-                            runat="server"></span>
+                            ></span>
                     </div>
                 </div>
                 <div class="form-item">
@@ -154,12 +154,12 @@
                                 name="password"
                                 id="password"
                                 placeholder="Enter password"
-                                runat="server" />
+                                 />
                         </div>
                         <span
                             class="form-message"
                             id="msgErrorPassword"
-                            runat="server"></span>
+                            ></span>
                     </div>
                 </div>
                 <div class="form-item">
@@ -172,12 +172,12 @@
                                 name="reEnterPassword"
                                 id="reEnterPassword"
                                 placeholder="Re-enter password"
-                                runat="server" />
+                                 />
                         </div>
                         <span
                             class="form-message"
                             id="msgErrorReEnterPassword"
-                            runat="server"></span>
+                            ></span>
                     </div>
                 </div>
                 <div class="form-submit">
@@ -196,7 +196,8 @@
             </div>
         </div>
     </form>
-    <script src="./js/signup.js"></script>
+    <!-- <script src="/js/signup.js"></script> -->
+     
 </body>
 </html>
 </html>

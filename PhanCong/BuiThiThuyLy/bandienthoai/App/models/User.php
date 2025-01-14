@@ -34,8 +34,8 @@ class User
     /**
      * @return bool
      */
-    public function delete($id)
-    {
-        return $this->db->deleteById($this->table, $id);
-    }
+    // public function delete($id)
+    // {
+    //     return $this->db->deleteById($this->table, $id);
+    // }
 }

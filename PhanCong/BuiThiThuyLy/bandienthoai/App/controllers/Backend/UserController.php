@@ -25,16 +25,16 @@ class UserController extends BaseController
         return $this->renderBackend('backend/user/index', $data, '/js/backend/user.js');
     }
 
-    public function delete()
-    {
-        $user_id = $_POST['user_id'];
-        $result = $this->model->delete($user_id);
-        if ($result) {
-            UrlHelper::redirect('/admin/user');
-        } else {
-            UrlHelper::redirect('/admin/user');
-        }
-    }
+    // public function delete()
+    // {
+    //     $user_id = $_POST['user_id'];
+    //     $result = $this->model->delete($user_id);
+    //     if ($result) {
+    //         UrlHelper::redirect('/admin/user');
+    //     } else {
+    //         UrlHelper::redirect('/admin/user');
+    //     }
+    // }
 
     public function edit()
     {

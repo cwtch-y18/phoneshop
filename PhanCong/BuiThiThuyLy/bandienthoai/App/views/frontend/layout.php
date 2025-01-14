@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <html lang="en">
-<head runat="server">
+<head >
     <meta charset="UTF-8" />
     <meta
         name="viewport"
@@ -28,14 +28,14 @@
 </head>
 <body>
     <div id="toast"></div>
-    <input type="hidden" id="statusServer" runat="server" />
-    <div class="hello-guest" id="helloGuest" runat="server"></div>
+    <input type="hidden" id="statusServer"  />
+    <div class="hello-guest" id="helloGuest" ></div>
     <!-- Header PC-->
     <header class="header">
         <div class="container">
             <div class="header-body">
                 <div class="logo">
-                    <a href="/admin/login">
+                    <a href="./">
                         <img src="img/img/logo.svg  " alt="" />
                     </a>
                 </div>
@@ -75,7 +75,7 @@
                                 href="#!"
                                 class="navbar__item"
                                 id="logout"
-                                runat="server">Blog</a>
+                                >Blog</a>
                         </li>
                         <!-- Show on mobile tablet -->
                         <li class="show-on-mobile-tablet">
@@ -83,7 +83,7 @@
                                 href="#!"
                                 class="navbar__item separate"
                                 id="A1"
-                                runat="server">
+                                >
                                 <label>Favorite products</label>
                                 <!-- <img
                                             src="/icon/tym.svg"
@@ -96,7 +96,7 @@
                                 href="./shopping-cart.aspx"
                                 class="navbar__item separate"
                                 id="A2"
-                                runat="server">
+                                >
                                 <label>Shopping cart</label>
                                 <!-- <img
                                             src="/icon/cart-item.svg"
@@ -109,7 +109,7 @@
                                 href="./login.aspx"
                                 class="navbar__item separate"
                                 id="A3"
-                                runat="server">
+                                >
                                 <label>Login</label>
                                 <!-- <img
                                             src="/icon/user.svg"
@@ -129,7 +129,7 @@
                         <img
                             src="/icon/cart-item.svg"
                             alt="Cart item" />
-                        <span class="counter-product" runat="server" id="counterProduct">NaN</span>
+                        <span class="counter-product"  id="counterProduct">NaN</span>
                     </a>
                     <a href="/admin/login" class="header-action__link">
                         <img src="/icon/user.svg" alt="User" />
@@ -177,7 +177,7 @@
                         <p class="introduce-first__label">
                             Pro.Beyond.
                         </p>
-                        <h1 class="introduce-first__title" id="productNameIntroduct" runat="server">IPhone 14 <strong>Pro</strong>
+                        <h1 class="introduce-first__title" id="productNameIntroduct" >IPhone 14 <strong>Pro</strong>
                         </h1>
                         <p class="introduce-first__desc">
                             Created to change everything for the better.
@@ -185,7 +185,7 @@
                         </p>
                         <a
                             href="/product-detail.aspx"
-                            class="introduce-first__btn btn-bg-transparent" id="linkToDetailProductIntroduct" runat="server">Shop Now
+                            class="introduce-first__btn btn-bg-transparent" id="linkToDetailProductIntroduct" >Shop Now
                         </a>
                     </div>
                     <img
@@ -317,7 +317,7 @@
                     <p class="product-top__label">Bestseller</p>
                     <p class="product-top__label">Featured Products</p>
                 </div>
-                <div class="product-list" id="productList" runat="server">
+                <div class="product-list" id="productList" >
                     <div class="product-item">
                         <img
                             src="/icon/tym-product.svg"
@@ -552,7 +552,7 @@
         <section class="discount">
             <div class="container">
                 <p class="discount__title">Discounts up to -50%</p>
-                <div class="discount-list" id="discountList" runat="server">
+                <div class="discount-list" id="discountList" >
                     <div class="discount-item">
                         <img
                             src="/icon/tym-product.svg"

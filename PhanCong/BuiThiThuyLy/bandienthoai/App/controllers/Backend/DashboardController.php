@@ -6,10 +6,9 @@ use controllers\BaseController;
 
 class DashboardController extends BaseController
 {
-
     public function __construct()
     {
-        parent::checkUserBackend();
+        parent::checkUserBackend(); // Kiểm tra quyền truy cập backend
     }
 
     public function index()
@@ -18,7 +17,7 @@ class DashboardController extends BaseController
             'title' => 'Trang chủ',
             'welcome_message' => 'Chào mừng bạn đến với trang chủ!',
         ];
+       
         $this->renderBackend('backend/dashboard', $data);
-
     }
 }
